@@ -14,6 +14,9 @@ const styles = StyleSheet.create({
 	statusBar:{
 		height: Constants.statusBarHeight,
 	},
+	commonElement:{
+		margin: 10
+	},
 	inputText:{
 		height: 40,
 		borderWidth: 1
@@ -33,15 +36,15 @@ export default class FormScreen extends Component{
 				<View style={styles.statusBar} />
 				<TextInput
 					placeholder="NIM"
-					style={styles.inputText}
+					style={[styles.commonElement, styles.inputText]}
 				/>
 				<TextInput
 					placeholder="Password"
 					secureTextEntry={true}
-					style={styles.inputText}
+					style={[styles.commonElement, styles.inputText]}
 				/>
 				<TouchableOpacity
-					style={styles.buttonLogin}
+					style={[styles.commonElement, styles.buttonLogin]}
 				>
 					<Text>Login</Text>
 				</TouchableOpacity>
