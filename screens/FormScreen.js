@@ -37,6 +37,11 @@ const styles = StyleSheet.create({
 		borderRadius: 8,
 		padding: 10
 	},
+	h1:{
+		fontSize: 32,
+		color: '#9EA4A9',
+		marginBottom: 20
+	},
 	inputText:{
 		height: 40,
 		borderWidth: 1,
@@ -62,6 +67,7 @@ export default class FormScreen extends Component{
 					style={styles.wrapper} 
 					>
 					<View style={styles.loginBox} >
+						<Text style={[styles.h1, styles.commonElement]} h1>Login</Text>
 						<TextInput
 							placeholder="NIM"
 							style={[styles.commonElement, styles.commonBox, styles.inputText]}
