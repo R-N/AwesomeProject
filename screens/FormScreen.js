@@ -6,7 +6,8 @@ import {
 	Button,
 	TouchableOpacity,
 	Text,
-	Image
+	Image,
+	ImageBackground
 } from 'react-native';
 import Constants from 'expo-constants'
 
@@ -53,7 +54,10 @@ export default class FormScreen extends Component{
 		return (
 			<View style={styles.main}>
 				<View style={styles.statusBar} />
-				<View style={styles.wrapper} >
+				<ImageBackground  
+					source={require("../assets/Tulips.jpg")}
+					style={styles.wrapper} 
+					>
 					<View style={styles.loginBox} >
 						<TextInput
 							placeholder="NIM"
@@ -70,7 +74,7 @@ export default class FormScreen extends Component{
 							<Text style={styles.buttonLoginText}>Login</Text>
 						</TouchableOpacity>
 					</View>
-				</View>
+				</ImageBackground>
 			</View>
 		)
 	}
