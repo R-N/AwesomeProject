@@ -21,7 +21,10 @@ const styles = StyleSheet.create({
 	wrapper:{
 		flex:1,
 		justifyContent: 'center',
-		alignItems: 'stretch'
+		alignItems: 'center'
+	},
+	loginBox:{
+		width: '80%'
 	},
 	commonElement:{
 		margin: 10
@@ -37,7 +40,8 @@ const styles = StyleSheet.create({
 		backgroundColor: "white"
 	},
 	buttonLogin:{
-		backgroundColor: '#007BFF'
+		backgroundColor: '#007BFF',
+		alignItems: 'center'
 	},
 	buttonLoginText:{
 		color: 'white'
@@ -50,20 +54,22 @@ export default class FormScreen extends Component{
 			<View style={styles.main}>
 				<View style={styles.statusBar} />
 				<View style={styles.wrapper} >
-					<TextInput
-						placeholder="NIM"
-						style={[styles.commonElement, styles.commonBox, styles.inputText]}
-					/>
-					<TextInput
-						placeholder="Password"
-						secureTextEntry={true}
-						style={[styles.commonElement, styles.commonBox, styles.inputText]}
-					/>
-					<TouchableOpacity
-						style={[styles.commonElement, styles.commonBox, styles.buttonLogin]}
-					>
-						<Text style={styles.buttonLoginText}>Login</Text>
-					</TouchableOpacity>
+					<View style={styles.loginBox} >
+						<TextInput
+							placeholder="NIM"
+							style={[styles.commonElement, styles.commonBox, styles.inputText]}
+						/>
+						<TextInput
+							placeholder="Password"
+							secureTextEntry={true}
+							style={[styles.commonElement, styles.commonBox, styles.inputText]}
+						/>
+						<TouchableOpacity
+							style={[styles.commonElement, styles.commonBox, styles.buttonLogin]}
+						>
+							<Text style={styles.buttonLoginText}>Login</Text>
+						</TouchableOpacity>
+					</View>
 				</View>
 			</View>
 		)
