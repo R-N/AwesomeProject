@@ -31,7 +31,6 @@ export default class FormScreen extends Component{
 		return (
 			<View>
 				<View style={styles.statusBar} />
-				<Image />
 				<TextInput
 					placeholder="NIM"
 					style={styles.inputText}
@@ -41,7 +40,6 @@ export default class FormScreen extends Component{
 					secureTextEntry={true}
 					style={styles.inputText}
 				/>
-				{/* <Button title="Login"/> */}
 				<TouchableOpacity
 					style={styles.buttonLogin}
 				>
