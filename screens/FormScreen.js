@@ -23,13 +23,14 @@ const styles = StyleSheet.create({
 	},
 	inputText:{
 		height: 40,
-		borderWidth: 1
+		borderWidth: 1,
+		borderColor: "#6C757D"
 	},
 	buttonLogin:{
-		backgroundColor: '#fff000',
-		width: 150,
-		borderWidth: 1,
-		borderColor: 'red'
+		backgroundColor: '#007BFF'
+	},
+	buttonLoginText:{
+		color: 'white'
 	}
 })
 
@@ -50,7 +51,7 @@ export default class FormScreen extends Component{
 				<TouchableOpacity
 					style={[styles.commonElement, styles.commonBox, styles.buttonLogin]}
 				>
-					<Text>Login</Text>
+					<Text style={styles.buttonLoginText}>Login</Text>
 				</TouchableOpacity>
 			</View>
 		)
