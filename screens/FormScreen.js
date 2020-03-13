@@ -25,7 +25,10 @@ const styles = StyleSheet.create({
 		alignItems: 'center'
 	},
 	loginBox:{
-		width: '80%'
+		width: '80%',
+		backgroundColor: '#ffffffdd',
+		borderRadius: 16,
+		padding: 16
 	},
 	commonElement:{
 		margin: 10
