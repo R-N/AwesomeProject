@@ -11,8 +11,17 @@ import {
 import Constants from 'expo-constants'
 
 const styles = StyleSheet.create({
+	main:{
+		minWidth: '100%',
+		minHeight: '100%'
+	},
 	statusBar:{
 		height: Constants.statusBarHeight,
+	},
+	wrapper:{
+		flex:1,
+		justifyContent: 'center',
+		alignItems: 'stretch'
 	},
 	commonElement:{
 		margin: 10
@@ -24,7 +33,8 @@ const styles = StyleSheet.create({
 	inputText:{
 		height: 40,
 		borderWidth: 1,
-		borderColor: "#6C757D"
+		borderColor: "#6C757D",
+		backgroundColor: "white"
 	},
 	buttonLogin:{
 		backgroundColor: '#007BFF'
@@ -37,22 +47,24 @@ const styles = StyleSheet.create({
 export default class FormScreen extends Component{
 	render(){
 		return (
-			<View>
+			<View style={styles.main}>
 				<View style={styles.statusBar} />
-				<TextInput
-					placeholder="NIM"
-					style={[styles.commonElement, styles.commonBox, styles.inputText]}
-				/>
-				<TextInput
-					placeholder="Password"
-					secureTextEntry={true}
-					style={[styles.commonElement, styles.commonBox, styles.inputText]}
-				/>
-				<TouchableOpacity
-					style={[styles.commonElement, styles.commonBox, styles.buttonLogin]}
-				>
-					<Text style={styles.buttonLoginText}>Login</Text>
-				</TouchableOpacity>
+				<View style={styles.wrapper} >
+					<TextInput
+						placeholder="NIM"
+						style={[styles.commonElement, styles.commonBox, styles.inputText]}
+					/>
+					<TextInput
+						placeholder="Password"
+						secureTextEntry={true}
+						style={[styles.commonElement, styles.commonBox, styles.inputText]}
+					/>
+					<TouchableOpacity
+						style={[styles.commonElement, styles.commonBox, styles.buttonLogin]}
+					>
+						<Text style={styles.buttonLoginText}>Login</Text>
+					</TouchableOpacity>
+				</View>
 			</View>
 		)
 	}
